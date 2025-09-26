@@ -26,7 +26,7 @@ Modern quiz uygulamalarında kullanılmak üzere tasarlanmış tam kapsamlı bir
 
 ```mermaid
 graph TD
-  subgraph Frontend (React SPA)
+  subgraph "Frontend (React SPA)"
     Home[Home]
     Browse[BrowseQuizzes]
     Submit[SubmitQuiz]
@@ -34,7 +34,7 @@ graph TD
     AdminUI[AdminDashboard]
   end
 
-  subgraph Backend (Express)
+  subgraph "Backend (Express)"
     Routes(Routes)
     Controllers(Controllers)
     Services(Services)
@@ -44,20 +44,20 @@ graph TD
     Cache(Redis cache)
   end
 
-  subgraph Data Layer
+  subgraph "Data Katmanı"
     Mongo[(MongoDB)]
     Redis[(Redis)]
   end
 
-  Home-->Routes
-  Browse-->Routes
-  Submit-->Routes
-  Docs-->Routes
-  AdminUI-->Routes
+  Home --> Routes
+  Browse --> Routes
+  Submit --> Routes
+  Docs --> Routes
+  AdminUI --> Routes
 
-  Routes-->Controllers-->Services-->Repos-->Models-->Mongo
-  Services-->Jobs-->Mongo
-  Services-->Cache-->Redis
+  Routes --> Controllers --> Services --> Repos --> Models --> Mongo
+  Services --> Jobs --> Mongo
+  Services --> Cache --> Redis
 ```
 
 ---
@@ -234,4 +234,3 @@ npm install --save-dev @babel/plugin-proposal-private-property-in-object
 - PR gönderirken `npm run test:server` ve `npm run build` komutlarını çalıştırman beklenir
 - Kod stili ESLint + Prettier uyumlu
 - Lisans: ISC
-
