@@ -1,0 +1,78 @@
+{
+	"name": "triviapi",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@emotion/react": "^11.11.4",
+		"@emotion/styled": "^11.11.0",
+		"@mui/icons-material": "^5.15.13",
+		"@mui/material": "^5.15.13",
+		"@testing-library/jest-dom": "^5.17.0",
+		"@testing-library/react": "^13.4.0",
+		"@testing-library/user-event": "^13.5.0",
+		"axios": "^1.6.7",
+		"bcryptjs": "^2.4.3",
+		"bullmq": "^5.58.9",
+		"compression": "^1.7.4",
+		"concurrently": "^8.2.2",
+		"cookie-parser": "^1.4.6",
+		"cors": "^2.8.5",
+		"dotenv": "^16.4.5",
+		"express": "^4.19.2",
+		"express-rate-limit": "^7.1.5",
+		"helmet": "^7.1.0",
+		"ioredis": "^5.8.0",
+		"jsonwebtoken": "^9.0.2",
+		"mongodb": "^6.12.0",
+		"mongoose": "^8.2.2",
+		"ms": "^2.1.3",
+		"pino": "^8.17.0",
+		"pino-http": "^8.6.1",
+		"pino-pretty": "^10.2.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-router-dom": "^6.22.3",
+		"react-scripts": "5.0.1",
+		"react-toastify": "^10.0.4",
+		"web-vitals": "^2.1.4",
+		"zod": "^3.23.8"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"server": "node server/server.js",
+		"dev": "concurrently \"npm run server\" \"npm run start\"",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"test:server": "cross-env NODE_OPTIONS=--experimental-vm-modules jest --config server/jest.config.cjs --runInBand",
+		"eject": "react-scripts eject"
+	},
+	"eslintConfig": {
+		"extends": [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"proxy": "http://localhost:5000",
+	"description": "**TriviAPI**, Türkçe trivia soruları içeren bir API'yi tanıtmak ve geliştiricilerin bu API'yi kolayca entegre edebilmesi için tasarlanmış açık kaynak bir dokümantasyon ve demo sitesidir. Bu proje, API'nin nasıl kullanılacağını göstermek, deneme yapmalarını sağlamak ve katkıda bulunmak isteyenlere açık bir platform sunmak için geliştirilmiştir.",
+	"main": "index.js",
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"cross-env": "^10.0.0",
+		"jest": "^27.5.1",
+		"mongodb-memory-server": "^10.2.1",
+		"supertest": "^7.1.4"
+	}
+}
